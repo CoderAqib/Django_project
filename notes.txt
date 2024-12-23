@@ -1,0 +1,50 @@
+>Commands
+pip install pipenv
+pipenv shell -> for venv activation
+pipenv install django
+django-admin startproject projectname  ->for creating project
+cd projectname
+python manage.py startapp appname   ->for creating ap inside the project.
+python manage.py makemigrations  -> creates migrations file(0001_initial.py) in migrations folder for CRUD operations
+python manage.py migrate  -> for applying migrations. it creates the table/tables.
+python manage.py createsuperuser  -> for creating admin. Djnago provides built-in admin dashboard app
+
+commands for interaction with database in shell
+ipython  -> for interactive python environment in terminal. Ctrl+D for exit ipython
+python manage.py shell  -> for shell env, we can do changes to database in shell easily.
+create object in shel e.g obj = Class(price=200, country='pakistan') then press enter and
+then obj.save() to save in the database
+
+
+
+> imp notes
+the project will have then
+project-> appname, projectname and manage.py
+the project will be created in the main folder/working directory
+we can create multiple projects in the main folder
+we can creare multiple apps in the project e.g in worldtour project, we can
+create asiatoursagecy, europytoursagency, etc.
+
+files in app
+migration folder -> contains changes made to models/database
+__init__.py -> to tell that thi directory is a module
+admin.py -> for registering models.
+apps.py -> configuration for app
+models.py -> for models, each class in model reprents a database table and variables represent table columns.
+tests.py -> for unit testing
+views.py -> handles request response logic, act as a bridge between model and template in MVT architecture
+
+MVT architecture
+Model:
+Represents the data structure and logic of your application.
+Defines how data is stored, retrieved, and manipulated (e.g., database interactions).
+
+View:
+Handles the logic of processing requests and preparing the response.
+Interacts with the Model to fetch or save data.
+Selects the appropriate Template to render the response.
+
+Template:
+Defines the presentation layer (the user interface).
+Contains HTML, CSS, and JavaScript to structure and style the content.
+Receives data from the View and dynamically generates the final output.
